@@ -121,4 +121,6 @@ def main(gateway, openconnect_args, username, password, totp_key):
             list(openconnect_args), stdin=subprocess.PIPE) as p:
         p.communicate(input=prelogin_cookie.encode())
 
-main()
+
+if __name__ == '__main__':
+    main()
